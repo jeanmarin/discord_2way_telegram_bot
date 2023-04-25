@@ -1,10 +1,14 @@
 import os
+from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 from telegram import Update, Bot
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
+load_dotenv()
+
 # Constants
+# Set your environment variables to these names in .env file see template .env.template
 DISCORD_TOKEN = os.environ["DISCORD_TOKEN"]
 TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 DISCORD_CHANNEL_ID = int(os.environ["DISCORD_CHANNEL_ID"])
